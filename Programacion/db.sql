@@ -1,3 +1,5 @@
+CREATE DATABASE db;
+USE DATABASE db;
 CREATE TABLE usuario(
     id int primary key auto_increment,
     username varchar(50) unique,
@@ -8,6 +10,6 @@ CREATE TABLE usuario(
 CREATE TABLE publicacion (
     autor varchar(100) NOT NULL,
     texto text,
-    fecha date,
+    fecha DATETIME,
     PRIMARY KEY (autor,fecha)
 );

@@ -4,8 +4,6 @@ session_start();
 
 $usuario = $_POST['Usuario'];
 $contrasena = $_POST['contrasena'];
-
-
 $consulta="SELECT * FROM usuario WHERE username='$usuario' and pasword='$contrasena' ";
 $resultado=mysqli_query($conexion, $consulta);
 $filas = mysqli_num_rows($resultado);
