@@ -1,7 +1,8 @@
 <?php 
 include ("../Controladores/conexionBaseDatos.php");
+session_start();
 
-$usuario = $_POST['usuario'];
+$usuario = $_POST['publicacion'];
 $nombreCompleto = $_POST['datosUsuario'];
 $contrasena = $_POST['ContrasenaUsuario'];
 
@@ -9,12 +10,9 @@ $insertarUsuario = "INSERT INTO `usuario`(`username`, `complete_name`, `pasword`
 $resultado = mysqli_query($conexion, $insertarUsuario);
 
 if($resultado){
-    echo "<script>alert('Se ingresaron los datos de forma correcta');window.location='../index.php';</script>";
-    $_SESSION['username']=$usuario;
-    $_SESSION['complete_name']=$nombreCompleto;
-    $_SESSION['pasword']=$contrasena;
+    echo "<script>alert('Se ingreso la publicacion de forma correcta');window.location='../index.php';</script>";
 }else{
-    echo "<script>alert('Ups, los datos no se ingresaron');window.location='../index.php';</script>";
+    echo "<script>alert('Ups, no se pudo publicar');window.location='../index.php';</script>";
 }
 
 mysqli_free_result($resultado);
