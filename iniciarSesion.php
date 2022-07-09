@@ -12,7 +12,7 @@
                         <h4>Usuario:</h4>
                         <input type="text" name="Usuario" placeholder="Ingrese Usuario"required><br>
                         <h4>Contraseña:</h4><input type="password" name="contrasena" placeholder="Contraseña" required><br>
-                        <button>Ingresar</button><h4>¿Todavía no tienes usuario? <a href="../Controladores/registrarUsuario.php">Regístrate</a></h4>       
+                        <button>Ingresar</button><h4>¿Todavía no tienes usuario? <a href="Controladores/altaUsuario.php">Regístrate</a></h4>       
                     </form>
     </main>
 </body>
